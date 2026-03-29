@@ -1,0 +1,13 @@
+/Users/I588852/PersonalProjects/mealstream/notification-service/src/main/java/com/mealstream/notification/NotificationServiceApplication.java
+/Users/I588852/PersonalProjects/mealstream/notification-service/src/main/java/com/mealstream/notification/config/KafkaConsumerConfig.java
+/Users/I588852/PersonalProjects/mealstream/notification-service/src/main/java/com/mealstream/notification/config/KafkaProducerConfig.java
+/Users/I588852/PersonalProjects/mealstream/notification-service/src/main/java/com/mealstream/notification/domain/Notification.java
+/Users/I588852/PersonalProjects/mealstream/notification-service/src/main/java/com/mealstream/notification/domain/ProcessedEvent.java
+/Users/I588852/PersonalProjects/mealstream/notification-service/src/main/java/com/mealstream/notification/kafka/consumer/DeliveryAssignedNotificationConsumer.java
+/Users/I588852/PersonalProjects/mealstream/notification-service/src/main/java/com/mealstream/notification/kafka/consumer/DeliveryFailedNotificationConsumer.java
+/Users/I588852/PersonalProjects/mealstream/notification-service/src/main/java/com/mealstream/notification/kafka/consumer/OrderAcceptedNotificationConsumer.java
+/Users/I588852/PersonalProjects/mealstream/notification-service/src/main/java/com/mealstream/notification/kafka/consumer/OrderCreatedNotificationConsumer.java
+/Users/I588852/PersonalProjects/mealstream/notification-service/src/main/java/com/mealstream/notification/kafka/consumer/OrderRejectedNotificationConsumer.java
+/Users/I588852/PersonalProjects/mealstream/notification-service/src/main/java/com/mealstream/notification/repository/NotificationRepository.java
+/Users/I588852/PersonalProjects/mealstream/notification-service/src/main/java/com/mealstream/notification/repository/ProcessedEventRepository.java
+/Users/I588852/PersonalProjects/mealstream/notification-service/src/main/java/com/mealstream/notification/service/NotificationDispatchService.java

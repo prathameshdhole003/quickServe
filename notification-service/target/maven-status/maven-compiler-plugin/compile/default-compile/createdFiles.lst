@@ -1,0 +1,15 @@
+com/mealstream/notification/service/NotificationDispatchService.class
+com/mealstream/notification/config/KafkaConsumerConfig.class
+com/mealstream/notification/NotificationServiceApplication.class
+com/mealstream/notification/domain/ProcessedEvent.class
+com/mealstream/notification/repository/ProcessedEventRepository.class
+com/mealstream/notification/kafka/consumer/OrderCreatedNotificationConsumer.class
+com/mealstream/notification/kafka/consumer/DeliveryFailedNotificationConsumer.class
+com/mealstream/notification/kafka/consumer/DeliveryAssignedNotificationConsumer.class
+com/mealstream/notification/kafka/consumer/OrderAcceptedNotificationConsumer.class
+com/mealstream/notification/repository/NotificationRepository.class
+com/mealstream/notification/domain/Notification.class
+com/mealstream/notification/domain/Notification$NotificationBuilder.class
+com/mealstream/notification/config/KafkaProducerConfig.class
+com/mealstream/notification/domain/ProcessedEvent$ProcessedEventBuilder.class
+com/mealstream/notification/kafka/consumer/OrderRejectedNotificationConsumer.class

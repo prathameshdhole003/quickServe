@@ -1,0 +1,54 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: restaurant-service
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/mealstream?currentSchema=restaurant_svc
+    username: mealstream
+    password: mealstream
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 2
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        default_schema: restaurant_svc
+
+  flyway:
+    enabled: true
+    schemas: restaurant_svc
+    locations: classpath:db/migration
+    create-schemas: true
+
+  kafka:
+    bootstrap-servers: 127.0.0.1:9093
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      properties:
+        spring.json.add.type.headers: false
+    consumer:
+      group-id: restaurant-service-group
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: "com.mealstream.common.events"
+        spring.json.use.type.headers: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+
+logging:
+  level:
+    com.mealstream: DEBUG
+    org.springframework.kafka: INFO
