@@ -75,7 +75,7 @@ Event-driven food delivery backend using Spring Boot microservices and Apache Ka
 ### 1. Start infrastructure
 
 ```bash
-cd mealstream
+cd quickServe
 docker compose up -d
 ```
 
@@ -292,14 +292,14 @@ curl -s -X POST http://localhost:8083/api/v1/drivers \
 ## Project Structure
 
 ```
-mealstream/
+quickServe/
 ├── docker-compose.yml
 ├── pom.xml                          ← parent POM with all dependency management
 ├── common/                          ← shared event records, enums, exceptions
-│   └── src/main/java/com/mealstream/common/
+│   └── src/main/java/com/quickServe/common/
 │       ├── events/                  ← OrderCreatedEvent, OrderAcceptedEvent, ...
 │       ├── enums/                   ← OrderStatus, DeliveryStatus, NotificationType
-│       └── exception/               ← MealStreamException, ErrorCode
+│       └── exception/               ← QuickServeException, ErrorCode
 ├── order-service/       :8081       ← REST entry point, idempotency, publishes order-created
 ├── restaurant-service/  :8082       ← consumes order-created, publishes accept/reject
 ├── delivery-service/    :8083       ← consumes order-accepted, retry+DLQ, assigns drivers
