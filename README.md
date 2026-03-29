@@ -1,4 +1,4 @@
-# MealStream
+# QuickServe
 
 Event-driven food delivery backend using Spring Boot microservices and Apache Kafka.
 
